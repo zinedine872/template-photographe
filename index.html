@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photographe Premium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nom du photographe</h1>
+    <p>Photographe professionnel passionné</p>
+    <a href="#contact" class="cta">Réserver une séance</a>
+  </header>
+
+  <section id="a-propos">
+    <h2>À propos</h2>
+    <p>Je suis photographe professionnel depuis plus de 10 ans. Ma passion : capturer des moments uniques, pleins d'émotion et de vérité. Je travaille avec des particuliers, des entreprises et des artistes.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="filtres">
+      <button data-cat="all">Tous</button>
+      <button data-cat="portrait">Portrait</button>
+      <button data-cat="mariage">Mariage</button>
+      <button data-cat="corporate">Corporate</button>
+    </div>
+    <div class="galerie">
+      <img src="images/portrait-01.jpg" alt="Portrait" data-cat="portrait">
+      <img src="images/portrait-02.jpg" alt="Portrait" data-cat="portrait">
+      <img src="images/mariage-01.jpg" alt="Mariage" data-cat="mariage">
+      <img src="images/mariage-02.jpg" alt="Mariage" data-cat="mariage">
+      <img src="images/corporate-01.jpg" alt="Corporate" data-cat="corporate">
+      <img src="images/corporate-02.jpg" alt="Corporate" data-cat="corporate">
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Séances en studio ou en extérieur</li>
+      <li>Portraits, mariages, événements</li>
+      <li>Retouches professionnelles incluses</li>
+      <li>Livraison numérique ou en album</li>
+    </ul>
+  </section>
+
+  <section id="Références">
+    <h2>Témoignages</h2>
+    <blockquote>
+      <p>"Un photographe talentueux, humain, et très professionnel. Les photos de notre mariage sont incroyables !"</p>
+      <cite>- Léa & Thomas</cite>
+    </blockquote>
+    <blockquote>
+      <p>"Je me suis sentie à l’aise dès la première minute. Le résultat dépasse mes attentes. Merci !"</p>
+      <cite>- Amélie D.</cite>
+    </blockquote>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="#" method="post">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nom du photographe. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Galerie filtrable JS simple
+    const buttons = document.querySelectorAll('.filtres button');
+    const images = document.querySelectorAll('.galerie img');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const cat = button.getAttribute('data-cat');
+        images.forEach(img => {
+          if (cat === 'all' || img.getAttribute('data-cat') === cat) {
+            img.style.display = 'block';
+          } else {
+            img.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
