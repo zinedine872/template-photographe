@@ -9,7 +9,7 @@ body {
   }
   
   header {
-    background: url("fond-photo.jpg") center/cover no-repeat;
+    background: url("images/fond-photo.jpg") center/cover no-repeat;
     color: white;
     padding: 100px 20px;
     text-align: center;
@@ -170,3 +170,99 @@ body {
     padding: 20px;
     font-size: 0.9em;
   }
+  /* Design de base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, section, footer {
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Galerie d'images */
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.galerie img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Formulaire de contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+  }
+  
+  header p {
+    font-size: 18px;
+  }
+
+  .galerie img {
+    width: 100%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  .cta {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
